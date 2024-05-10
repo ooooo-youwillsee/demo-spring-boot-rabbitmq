@@ -1,0 +1,20 @@
+plugins {
+    id "java"
+}
+
+repositories {
+    maven { url "https://maven.aliyun.com/repository/public" }
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web:2.7.14")
+    implementation("org.springframework.boot:spring-boot-starter-amqp:2.7.14")
+    implementation("cn.hutool:hutool-all:5.8.26")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.14")
+}
+
+
+test {
+    useJUnitPlatform()
+}
